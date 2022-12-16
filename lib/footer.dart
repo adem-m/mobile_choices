@@ -14,13 +14,12 @@ class Footer extends StatefulWidget {
 
 class _FooterState extends State<Footer> {
   List<Widget> getItemList() {
-    return List.generate(
-      widget.items.length,
-      (index) => ChoiceItem(
-        name: widget.items[index],
-        onTap: widget.onTap,
-      ),
-    );
+    return widget.items
+        .map((item) => ChoiceItem(
+              name: item,
+              onTap: widget.onTap,
+            ))
+        .toList();
   }
 
   @override
@@ -28,11 +27,12 @@ class _FooterState extends State<Footer> {
     return Container(
       color: Colors.white,
       child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Wrap(
-            spacing: 5,
-            children: getItemList(),
-          )),
+        padding: const EdgeInsets.all(8.0),
+        child: Wrap(
+          spacing: 5,
+          children: getItemList(),
+        ),
+      ),
     );
   }
 }

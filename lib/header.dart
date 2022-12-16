@@ -19,10 +19,8 @@ class _HeaderState extends State<Header> {
       );
     }
     return Wrap(
-      spacing: 5,
-      children: List.generate(widget.items.length,
-          (index) => ChoiceItem(name: widget.items[index])),
-    );
+        spacing: 5,
+        children: widget.items.map((item) => ChoiceItem(name: item)).toList());
   }
 
   @override

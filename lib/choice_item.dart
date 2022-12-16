@@ -24,9 +24,7 @@ class _ChoiceItemState extends State<ChoiceItem> {
 
   void handleOnTap() {
     if (widget.onTap != null) {
-      setState(() {
-        _isSelected = !_isSelected;
-      });
+      _isSelected = !_isSelected;
       widget.onTap!(widget.name);
     }
   }

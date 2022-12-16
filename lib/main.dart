@@ -14,8 +14,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final List<String> _choices =
-      List.of(["Jeux vidéo", "Mbappe", "Musique", "DOOM", "Cinéma", "Développement mobile"]);
+  final List<String> _choices = List.of([
+    "Jeux vidéo",
+    "Mbappe",
+    "Musique",
+    "DOOM",
+    "Cinéma",
+    "Développement mobile"
+  ]);
 
   final List<String> _selectedItems = List.empty(growable: true);
 
